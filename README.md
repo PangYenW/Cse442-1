@@ -7,4 +7,4 @@ The web is going to
 5. Search bar for students to find professors
 6. Schedules match with chosen professors / TA office hours
 
-Here is our Trello shareable link: https://trello.com/invite/cse4422/4a5f92f2c851993b29568664f07e2cc3
+Here is our ZenHub shareable link: https://app.zenhub.com/workspaces/project-5c642272f716dc7e3adf30cd/boards?repos=169766535
