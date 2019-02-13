@@ -6,3 +6,4 @@
 # 5) UB Events Browser - organizations and clubs in UB can post their recent events with time, location and fee on the web. Can include alerts from school. It would look like a post from Instagram. Aimed to help to promote events and inform students.
 
 # Here is our Trello shareable link: https://trello.com/invite/cse4422/4a5f92f2c851993b29568664f07e2cc3
+#test
