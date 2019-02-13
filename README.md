@@ -1,5 +1,5 @@
 # UBStalking: 
-The app is going to 
+The web is going to 
 1. list out office hours, contact information, academic papers and office location for each professors
 2. find professors by current courses
 3. show research opportunities provided from professors
