@@ -74,6 +74,9 @@ nav{
   font-weight:bold;
   font-size:14px;
 }
+.nav-sub a:hover{
+  color:red;
+}
 .nav-sub li{
   list-style:none;
 }
