@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rate this Professor</title>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  </head>
+  <body>
+    <h2>Rate this Professor</h2>
+    <input type='text' id='messageInput'  placeholder='Enter comments here...'>
+    <button type="button" onclick="savedata()">Post & Save</button>
+    <br><br><br>
+    <hr>
+    <h2>Comments</h2>
+    <textarea rows="10" cols="50" id="results" readonly></textarea>
+    <script>
+
+    var messagesRef = new Firebase('https://ubstalking-19cf2.firebaseio.com/');
+    var messageField = document.getElementById('messageInput');
+    var messageResults = document.getElementById('results');
+    // Save data to firebase
+    function savedata(){
+      var message = messageField.value;
+      messagesRef.push({fieldName:'messageField', text:message});
+      messageField.value = '';
+    }
+    // Update results when data is added
+    messagesRef.limitToLast(10).on('child_added', function (snapshot) {
+        var data = snapshot.val();
+        console.log(snapshot.val());
+        var message = data.text;
+        if (message != undefined)
+        {
+          messageResults.value += '\n' + message;
+        }
+    });
+
+    </script>
+  </body>
+</html>
