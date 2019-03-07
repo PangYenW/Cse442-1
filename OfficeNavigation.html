@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Office Navigation</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Laila" rel="stylesheet">
+    <link rel="stylesheet" href="ScheduleMatching.css">
+    <meta charset = "utf-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzE9xAESye6Kde-3hT-6B90nfwUkcS8Yw&sensor=false">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(43.002626, -78.787678);
+
+function initialize()
+{
+  var mapProp = {
+    center: new google.maps.LatLng(43.002626, -78.787678),
+    zoom:17,
+    panControl:true,
+    zoomControl:true,
+    mapTypeControl:true,
+    scaleControl:true,
+    streetViewControl:true,
+    overviewMapControl:true,
+    rotateControl:true,    
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+  title:'Click to zoom'
+  });
+
+marker.setMap(map);
+
+// Zoom to 9 when clicking on marker
+google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(9);
+  map.setCenter(marker.getPosition());
+  });
+     
+google.maps.event.addListener(map,'center_changed',function() {
+// 3 seconds after the center of the map has changed, pan back to the marker
+  window.setTimeout(function() {
+    map.panTo(marker.getPosition());
+  },3000);
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+  </head>
+  <body>
+    <nav>
+      <div class = "logo" href="homepage.html">
+        <h3> UBStalking'-' </h3>
+      </div>
+
+      <form action="" method="post">
+          <input type = "text" id = "search-bar" placeholder = "Search for your professors!" value ="" maxlength ="50"
+          autocompleete = "off" onMousedown ="" onBlur = "" /><input type = "submit" id = "search-btn" value="Go!"/>
+      </form>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+
+        <div class="menu">
+          <ul>
+          <li>
+          <a href="homepage.html">Home</a></li>
+          <li>
+          <a href="ScheduleMatching.html">Schedule Matching</a></li>
+          <li>
+          <a href="#">Report Bugs</a></li>
+          </ul>
+      </div>
+
+      <label for="nav-toggle" class="burger"><span></span></label>
+    </nav>
+<div id="googleMap" style="width:1000px;height:800px;"></div>
+    </body>
+</html>
