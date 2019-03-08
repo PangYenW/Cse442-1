@@ -144,10 +144,9 @@ h2{
   border: 5px solid #000000;
   width: 50%;
   height: auto;
-  resize: both;
   text-align: center;
 }
-a:link {
+.none a:link {
   text-decoration: none;
   color: black;
 }
@@ -175,21 +174,91 @@ ul.none {
 }
 h3{
   font-family: 'Gloria Hallelujah', cursive;
-  position:static;
-  font-size:3vw;
+  position:relative;
+  font-size:2vw;
   letter-spacing:5px;
   text-align: center;
   resize:both;
 }
-h4{
+h5{
   font-family: 'Gloria Hallelujah', cursive;
   margin: auto;
+  position:relative;
+  resize:both;
+  top:10px;
+  padding: 5px;
+  border: 5px solid #000000;
+  width: 10%;
+  height: auto;
+  font-size: 20px;
+  text-align: center;
+}
+h6{
+  font-family: 'Gloria Hallelujah', cursive;
+  margin: auto;
+  position:relative;
+  resize:both;
+  top:20px;
+  padding: 5px;
+  border: 5px solid #000000;
+  width: 10%;
+  height: auto;
+  font-size: 20px;
+  text-align: center;
+}
+h7{
+  margin: auto;
+  font-family: 'Gloria Hallelujah', cursive;
   position:static;
+  top: 5px;
+  font-size:3vw;
+  text-align: center;
+  resize:both;
+}
+#messageInput{
+  margin: auto;
+  border: 1px solid #000000;
+  border-right:none;
+  font-size:15px;
+  padding:10px;
+  outline:none;
+  border-radius:20%;
+  width:4vw;
+  height:35px;
+  position: relative;
+  top:30px;
+  left:30%;
+  text-align: -webkit-left;
+  min-width: 35%;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+#messageButton{
+  margin: auto;
+  border: 1px solid #000000;
+  font-size:15px;
+  height:35px;
+  width:5vw;
+  border-radius:30%;
+  background: #ffffff;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  position:relative;
+  font-family: 'Gloria Hallelujah', cursive;
+  top:30px;
+  left:30%;
+  text-align: center;
+}
+textarea{
+  font-family: 'Gloria Hallelujah', cursive;
+  margin: auto;
+  position:relative;
   resize:both;
   padding: 5px;
   border: 5px solid #000000;
   width: 50%;
   height: auto;
-  resize: both;
+  left:25%;
   text-align: left;
 }
+
